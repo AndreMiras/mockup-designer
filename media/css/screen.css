@@ -114,7 +114,7 @@ nav {
     position: absolute;
     top: 28px;
     right: 120px;
-    width: 450px;
+    width: 550px;
     z-index: 999;
 }
 
@@ -192,8 +192,8 @@ nav {
         padding: 5px;
     }
 
-    nav .export {
-        width: 90px;
+    nav .import-export {
+        width: 150px;
         margin-right: 10px;
     }
 
@@ -212,7 +212,9 @@ nav {
         margin-top: 20px;
     }
 
-    nav #save {
+    nav #save,
+    nav #import,
+    nav .export-image {
         font-size: 20px;
         padding: 5px;
         margin-top: 30px;
@@ -424,7 +426,8 @@ footer {
     border: 1px solid #a2a2a2;
 }
 
-.object table th {
+.object table th,
+.object table th input {
     text-align: center;
     padding: 3px 5px;
     background-color: #383838;
@@ -627,4 +630,8 @@ footer {
     position: absolute;
     top: 20px;
     right: 30px;
+}
+
+#id_models {
+   width: 100%;
 }

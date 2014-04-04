@@ -220,9 +220,14 @@ usemockups.fixtures.toolbox = [
                 "default": "3"
             },
             {
-                "name": "values",
-                "hidden": true,
-                "default": [
+                "name": "header",
+                "default": true,
+                "type":"boolean"
+            },
+            {
+                "name":"values",
+                "hidden":true,
+                "default":[
                     ["lorem", "ipsum", "dolor"],
                     ["sit", "amet", "lorem"],
                     ["ipsum", "dolor", "sit"]
