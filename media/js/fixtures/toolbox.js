@@ -119,6 +119,17 @@ usemockups.fixtures.toolbox = [
         ]
     },
     {
+        "name":"fontawesome",
+        "category":"form",
+        "template":"#fontawesome-template",
+        "attributes":[
+            {
+                "name":"css_class",
+                "default":"fa-font-awesome"
+            }
+        ]
+    },
+    {
         "name":"radio",
         "category":"form",
         "template":"#radio-template",
