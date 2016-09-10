@@ -126,6 +126,10 @@ usemockups.fixtures.toolbox = [
             {
                 "name":"css_class",
                 "default":"fa-font-awesome"
+            },
+            {
+                "name":"color",
+                "default":"black"
             }
         ]
     },
