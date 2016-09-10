@@ -80,6 +80,7 @@ aside .toolbox .hscrollbar  { background-position: -480px 0;}
 aside .toolbox .progressbar { background-position: -520px 0;}
 aside .toolbox .browser     { background-position: -560px 0;}
 aside .toolbox .groupbox    { background-position: -600px 0;}
+aside .toolbox .fontawesome { background-position: -640px 0;}
 
 article {
     background: white url(../images/paper.png);
