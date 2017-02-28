@@ -1,10 +1,12 @@
+//Property Dialog for single elements of the mockup
 usemockups.views.PropertyDialog = Backbone.View.extend({
     el: "footer form",
     template: $("#property-form-template").html(),
     events: {
         'submit': 'submit',
         'click .send-to-back': 'send_to_back',
-        'click .bring-to-front': 'bring_to_front'
+        'click .bring-to-front': 'bring_to_front',
+		'click .center-item': 'center_item'
     },
     initialize: function () {
         this.on("update_for_attribute", this.update_for_attribute);
@@ -15,7 +17,6 @@ usemockups.views.PropertyDialog = Backbone.View.extend({
     render: function () {
 
         this.footer.show();
-
         this.$el.html(_.template(this.template, {
             "attributes": this.get_attributes()
         })).find("input").change(function (ui) {
@@ -41,6 +42,10 @@ usemockups.views.PropertyDialog = Backbone.View.extend({
 
         return this;
     },
+    set_measuredSizes: function (measuredSizes){
+      this.measuredSizes = measuredSizes;
+      return this;
+    },
     update_for_attribute: function (field) {
         this.$el.find("#id_"  + field.data("attribute")).val(field.val());
     },
@@ -52,8 +57,13 @@ usemockups.views.PropertyDialog = Backbone.View.extend({
     },
     get_attributes: function () {
         return _.map(this.model.tool.get("attributes"), function (attribute) {
+            var value = this.model.get(attribute.name);
+            // makes sure the input is escaped if it's a string
+            if (typeof value === 'string' || value instanceof String) {
+                value = value.replace(/"/g, '&quot;');
+            }
             return _.extend({
-                "value": this.model.get(attribute.name)
+                "value": value
             }, attribute);
         },this)
     },
@@ -68,6 +78,15 @@ usemockups.views.PropertyDialog = Backbone.View.extend({
         this.hide();
         return false;
     },
+	center_item: function () {
+        var documentWidth = usemockups.active_document_view.model.attributes.width;
+        var left = Math.floor((documentWidth - this.measuredSizes.width) / 2);
+		this.model.set({
+			"left":  left
+		});
+
+		return false;
+	},
     send_to_back: function () {
         this.model.set({
             "z_index":  usemockups.views.Mockup.prototype.min_z_index

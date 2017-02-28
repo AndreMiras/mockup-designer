@@ -47,6 +47,78 @@ usemockups.fixtures.toolbox = [
         ]
     },
     {
+        "name":"hscrollbar",
+        "category":"form",
+        "template":"#hscrollbar-template",
+        "attributes":[
+            {
+                "name":"value",
+                "default": 30 /* percentage */
+            },
+            {
+                "name":"width",
+                "default":120
+            }
+        ]
+    },
+    {
+        "name":"progressbar",
+        "category":"form",
+        "template":"#progressbar-template",
+        "attributes":[
+            {
+                "name":"percent",
+                "default": 30
+            },
+            {
+                "name":"width",
+                "default":120
+            }
+        ]
+    },
+    {
+        "name":"browser",
+        "category":"form",
+        "template":"#browser-template",
+        "attributes":[
+            {
+                "name":"title",
+                "default": "Website"
+            },
+            {
+                "name":"url",
+                "default": "http://"
+            },
+            {
+                "name":"width",
+                "default":250
+            },
+            {
+                "name":"height",
+                "default":250
+            }
+        ]
+    },
+    {
+        "name":"groupbox",
+        "category":"form",
+        "template":"#groupbox-template",
+        "attributes":[
+            {
+                "name":"title",
+                "default": "GroupBox"
+            },
+            {
+                "name":"width",
+                "default":250
+            },
+            {
+                "name":"height",
+                "default":250
+            }
+        ]
+    },
+    {
         "name":"radio",
         "category":"form",
         "template":"#radio-template",
@@ -165,6 +237,11 @@ usemockups.fixtures.toolbox = [
             {
                 "name":"columns",
                 "default":"3"
+            },
+            {
+                "name": "header",
+                "default": true,
+                "type":"boolean"
             },
             {
                 "name":"values",

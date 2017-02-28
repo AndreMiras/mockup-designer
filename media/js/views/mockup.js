@@ -1,16 +1,18 @@
+//This is the view for the mockup elements (button, checkbox, etc.)
+
 usemockups.views.Mockup = Backbone.View.extend({
     tagName: "div",
     className: "object",
     events: {
         "click": "show_property_dialog",
-        "keydown": "move"
+        "keydown": "keydown"
     },
     initialize: function () {
 
         this.model.on("change", this.render, this);
 
         this.article = $("article");
-        this.tool = usemockups.toolbox.get(this.model.get("tool"));
+        this.tool = usemockups.toolbox.get(this.model.get("tool")); //gets which kind of mockup element it is (called tool, since they are created via tools). Get model via text string like "text"(for text tool) ,since the toolbox-model’s ids are actually human readable text strings for the represented tools.
         this.template = $(this.tool.get("template")).html();
 
         this.model.on("destroy", this.detach, this)
@@ -119,6 +121,10 @@ usemockups.views.Mockup = Backbone.View.extend({
 
     },
 
+	measure: function(){
+    	this.model.set("measured_size", {height: this.$el.height(), width: this.$el.width()});
+	},
+
     focus: function () {
         this.$el.focus();
         return this;
@@ -137,16 +143,22 @@ usemockups.views.Mockup = Backbone.View.extend({
             usemockups.active_property_dialog.undelegateEvents();
         }
 
+        var measuredSizes = {height: this.$el.height(), width: this.$el.width()};
+        var measuredSizes = {height: this.$el.height(), width: this.$el.width()};
+
         usemockups.active_property_dialog = (new usemockups.views.PropertyDialog({
             "model": this.model
-        })).render()
+        })).set_measuredSizes(measuredSizes).render()
     },
 
     detach: function () {
         this.$el.remove();
     },
 
-    move: function (e) {
+    /*
+     * Moves the mockup if the key was an arrow key.
+     */
+    keydown_move: function (e) {
         var movements = {
             37: { "left": -5 },
             39: { "left": 5 },
@@ -160,6 +172,21 @@ usemockups.views.Mockup = Backbone.View.extend({
             }
             return false;
         }
+    },
+
+    /*
+     * Deletes the mockup if the key was the del key.
+     */
+    keydown_destroy: function (e) {
+        if (e.keyCode == 46) {
+            this.model.destroy();
+            return false;
+        }
+    },
+
+    keydown: function (e) {
+        this.keydown_move(e);
+        this.keydown_destroy(e);
     }
 
 
@@ -167,6 +194,7 @@ usemockups.views.Mockup = Backbone.View.extend({
 
 /*
 * Custom Mockups
+Extend the normal mockups functionality with additional/different functionality
 * */
 
 usemockups.views.TableMockup = usemockups.views.Mockup.extend({

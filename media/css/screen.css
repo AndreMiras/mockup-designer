@@ -1,5 +1,6 @@
 body {
     background: #f4f4f4 url(../images/dots.png);
+    padding-bottom: 150px;
 }
 
 aside {
@@ -13,68 +14,72 @@ aside {
 
 }
 
-    aside h2 {
-        cursor: default;
-        padding: 5px 10px;
-        font-weight: normal;
-        font-size: 18px;
-        text-align: left;
-        color: #e2e2e2;
-        margin: 0 10px 0 5px;
-        /*border-left: 5px solid #212121;*/
-        /*background-color: #1d1d1d;*/
-    }
+aside h2 {
+    cursor: default;
+    padding: 5px 10px;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: left;
+    color: #e2e2e2;
+    margin: 0 10px 0 5px;
+    /*border-left: 5px solid #212121;*/
+    /*background-color: #1d1d1d;*/
+}
 
-    aside .toolbox {
-        clear: both;
-        margin: 0 0 20px;
-        padding: 5px 0 0 10px;
-        overflow: hidden;
+aside .toolbox {
+    clear: both;
+    margin: 0 0 20px;
+    padding: 5px 0 0 10px;
+    overflow: hidden;
 
-    }
+}
 
-    aside .toolbox li {
-        list-style: none;
-        font-size: 12px;
-        width: 40px;
-        height: 40px;
-        margin: 4px;
-        float: left;
-        display: block;
-        background-color: #2b2b2b;
-        border-radius: 5px;
+aside .toolbox li {
+    list-style: none;
+    font-size: 12px;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    float: left;
+    display: block;
+    background-color: #2b2b2b;
+    border-radius: 5px;
 
 
 
-    }
+}
 
-    aside .toolbox li span {
-        padding: 4px 10px;
-        color: #303030;
-        font-size: 18px;
-        font-weight: bold;
-        display: block;
-        cursor: default;
-        cursor: move;
+aside .toolbox li span {
+    padding: 4px 10px;
+    color: #303030;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    cursor: default;
+    cursor: move;
 
-    }
+}
 
-    aside .toolbox li {
-        background-image: url(../images/icons.png);
-        text-indent: -9999px;
-    }
+aside .toolbox li {
+    background-image: url(../images/icons.png);
+    text-indent: -9999px;
+}
 
-    aside .toolbox .checkbox    { background-position: -40px 0;}
-    aside .toolbox .radio       { background-position: -80px 0;}
-    aside .toolbox .combobox    { background-position: -120px 0;}
-    aside .toolbox .text        { background-position: -160px 0;}
-    aside .toolbox .heading     { background-position: -200px 0;}
-    aside .toolbox .paragraph   { background-position: -240px 0;}
-    aside .toolbox .label       { background-position: -280px 0;}
-    aside .toolbox .table       { background-position: -320px 0;}
-    aside .toolbox .image       { background-position: -360px 0;}
-    aside .toolbox .rectangle   { background-position: -400px 0;}
-    aside .toolbox .circle      { background-position: -440px 0;}
+aside .toolbox .checkbox    { background-position: -40px 0;}
+aside .toolbox .radio       { background-position: -80px 0;}
+aside .toolbox .combobox    { background-position: -120px 0;}
+aside .toolbox .text        { background-position: -160px 0;}
+aside .toolbox .heading     { background-position: -200px 0;}
+aside .toolbox .paragraph   { background-position: -240px 0;}
+aside .toolbox .label       { background-position: -280px 0;}
+aside .toolbox .table       { background-position: -320px 0;}
+aside .toolbox .image       { background-position: -360px 0;}
+aside .toolbox .rectangle   { background-position: -400px 0;}
+aside .toolbox .circle      { background-position: -440px 0;}
+aside .toolbox .hscrollbar  { background-position: -480px 0;}
+aside .toolbox .progressbar { background-position: -520px 0;}
+aside .toolbox .browser     { background-position: -560px 0;}
+aside .toolbox .groupbox    { background-position: -600px 0;}
 
 article {
     background: white url(../images/paper.png);
@@ -106,191 +111,200 @@ nav {
     position: absolute;
     top: 28px;
     right: 120px;
-    width: 450px;
+    width: 550px;
     z-index: 999;
 }
 
-    nav > a {
-        margin: 0;
-        background-color: #ebebeb;
-        font-size: 17px;
-        padding: 5px 0;
-        text-align: center;
-        width: 170px;
-        float: right;
-        color: #585858;
-        cursor: pointer;
-        font-weight: bold;
-    }
+nav > a {
+    margin: 0;
+    background-color: #ebebeb;
+    font-size: 17px;
+    padding: 5px 0;
+    text-align: center;
+    width: 170px;
+    float: right;
+    color: #585858;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-    nav > a:hover {
-        background-color: #fee38d;
-    }
+nav > a:hover {
+    background-color: #fee38d;
+}
 
-    nav section {
-        position: absolute;
-        width: 500px;
-        display: none;
-        background-color: #e8e8e8;
-        margin-top: 33px;
-        border: 3px solid #505050;
-    }
+nav section {
+    position: absolute;
+    width: 500px;
+    display: none;
+    background-color: #e8e8e8;
+    margin-top: 33px;
+    border: 3px solid #505050;
+}
 
-    nav section h3 {
-        color: #414141;
-        padding: 7px 15px 0;
-        margin: 0;
-    }
+nav section h3 {
+    color: #414141;
+    padding: 7px 15px 0;
+    margin: 0;
+}
 
-    nav ul {
-        margin: 0;
-        width: 100%;
-    }
+nav ul {
+    margin: 0;
+    width: 100%;
+}
 
-    nav ul li {
-        margin: 0;
-        padding: 0;
-    }
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
 
-    nav ul li a {
-        display: inline-block;
-        padding: 10px 16px;
-        color: #4a4a4a;
-        text-decoration: none;
-    }
+nav ul li a {
+    display: inline-block;
+    padding: 10px 16px;
+    color: #4a4a4a;
+    text-decoration: none;
+}
 
-    nav ul li a.destroy {
-        float: right;
-        margin-right: 10px;
-    }
+nav ul li a.destroy {
+    float: right;
+    margin-right: 10px;
+}
 
-    nav ul li a:hover {
-        text-decoration: underline;
-    }
+nav ul li a:hover {
+    text-decoration: underline;
+}
 
-    nav form {
-        padding: 15px;
-    }
+nav form {
+    padding: 15px;
+}
 
-    nav form label {
-        display: block;
-        padding: 5px 2px;
-        font-size: 17px;
-        font-weight: bold;
-    }
+nav form label {
+    display: block;
+    padding: 5px 2px;
+    font-size: 17px;
+    font-weight: bold;
+}
 
-    nav form input {
-        width: 92%;
-        padding: 5px;
-    }
+nav form input {
+    width: 92%;
+    padding: 5px;
+}
 
-    nav .export {
-        width: 90px;
-        margin-right: 10px;
-    }
+nav .import-export {
+    width: 150px;
+    margin-right: 10px;
+}
 
-    nav .properties {
-        width: 120px;
-        margin-right: 10px;
-    }
+nav .properties {
+    width: 120px;
+    margin-right: 10px;
+}
 
-    nav #document-properties {
-        overflow: hidden;
-    }
+nav #document-properties {
+    overflow: hidden;
+}
 
-    nav .width, nav .height {
-        width: 48%;
-        float: left;
-        margin-top: 20px;
-    }
+nav .width, nav .height {
+    width: 48%;
+    float: left;
+    margin-top: 20px;
+}
 
-    nav #save {
-        font-size: 20px;
-        padding: 5px;
-        margin-top: 30px;
-        cursor: pointer;
-        background-color: #494949;
-        color: white;
-        border: none;
-        width: 100px;
-    }
+nav #save,
+nav #import,
+nav .export-image {
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #494949;
+    color: white;
+    border: none;
+    width: 100px;
+}
 
 
 
 
 footer {
-    display: none;
-    position: fixed;
-    bottom: 0;
-
-    background-color: white;
-    width: 100%;
-    border-top: 10px solid #393939;
+display: none;
+position: fixed;
+bottom: 0;
+background-color: white;
+width: 100%;
+border-top: 1px solid #393939;
+z-index: 200;
 
 }
 
-    footer form {
+footer form {
 
-    }
+}
 
-    footer > * {
-        width: 930px;
-        margin-left: 238px;
-    }
 
-    footer h2 {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding: 4px;
-        color: gray;
-        font-weight: normal;
+footer h2 {
 
-    }
+    padding-left:0.5em;
+    color: gray;
+    font-weight: bold;
+    font-size: 1em;
+    position: absolute;
+    left:0;
 
-    footer form {
-        padding-left: 4px;
-    }
+}
 
-    footer form .line {
-        width: 120px;
-        float: left;
-        margin-right: 30px;
-        margin-left: 2px;
-        padding-bottom: 20px;
-    }
+footer form {
+    padding: 4px;
+    width: 95%;
+    border-left: 7em solid #eee;/*to make space for the toolbar title*/
+    padding: 4px 4px 4px 1em;
+    width: 95%;
+}
 
-    footer form input {
-        width: 100%;
-        outline: none;
-        padding: 2px 4px;
+footer form .line {
+    display: inline-block;
+    margin-right: 1em;
+    padding:5px 0 0 0;
+}
 
-    }
+footer form input {
+    outline: none;
+    padding: 2px 4px;
+    display: inline;
+}
 
-    footer form label {
-        color: #484848;
-    }
+footer form input[type=text]{width: 6em;}
 
-    footer .line.tools {
-        float: right;
-        text-align: right;
-        font-size: 18px;
-        margin-top: -35px;
-    }
+footer form label {
+    color: #484848;
+    display: inline;
+}
 
-    footer a {
-        display: inline-block;
-        color: white;
-        background-color: #525252;
-        padding: 3px 8px;
-        text-decoration: none;
-        margin-bottom: 3px;
-        font-size: 17px;
-    }
+footer .line.tools {
+    margin-left: 20px;
+    padding-left: 22px;
+    right: 0;
+    text-align: right;
+}
 
-    footer a:hover {
-        background-color: #383838;
-        color: white;
-    }
+footer .line.tools .delete {
+    margin-left: 1em;
+}
+
+
+footer a {
+    display: inline-block;
+    color: white;
+    background-color: #525252;
+    padding: 3px 8px;
+    text-decoration: none;
+    margin-bottom: 3px;
+    font-size: 17px;
+}
+
+footer a:hover {
+    background-color: #383838;
+    color: white;
+}
 
 
 .object {
@@ -416,7 +430,8 @@ footer {
     border: 1px solid #a2a2a2;
 }
 
-.object table th {
+.object table th,
+.object table th input {
     text-align: center;
     padding: 3px 5px;
     background-color: #383838;
@@ -452,6 +467,113 @@ footer {
     border-color: #383838 transparent transparent transparent;
     text-indent: -9999px;
 
+}
+
+.object .hscrollbar {
+    width: 100%;
+    height: 30px;
+    background-color: #e8e8e8;
+    overflow: hidden;
+    min-width: 120px;
+    border: 3px solid #383838;
+    border-radius: 5px;
+}
+
+.object .hscrollbar .trough {
+    height: 100%;
+    width: 30px;
+    background-color: black;
+}
+
+.object .hscrollbar .left,
+.object .hscrollbar .right {
+    position: absolute;
+    top: 11px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    text-indent: -9999px;
+}
+
+.object .hscrollbar .left {
+    left: 5px;
+    border-width: 8px 12px 8px 0;
+    border-color: transparent #383838 transparent transparent;
+}
+
+.object .hscrollbar .right {
+    right: 5px;
+    border-width: 8px 0 8px 12px;
+    border-color: transparent transparent transparent #383838;
+}
+
+.object .progressbar {
+    width: 100%;
+    height: 30px;
+    background-color: #e8e8e8;
+    min-width: 120px;
+    border: 3px solid #383838;
+    border-radius: 5px;
+}
+
+.object .progressbar .bar {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+
+.object .browser {
+    height: 100%;
+    width: 100%;
+    display:table;
+    border-collapse: collapse;
+    border: 3px solid #383838;
+    background-color: #e8e8e8;
+    color: #383838;
+}
+
+.object .browser .top {
+    display:table-row;
+    text-align: center;
+}
+
+.object .browser .url {
+    width: 60%;
+    margin: 0 auto 5px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    text-align: left;
+    font-weight: normal;
+    border: 3px solid #383838;
+}
+
+.object .browser .page-content:before {
+    content: " ";
+}
+
+.object .browser .page-content {
+    display:table-row;
+    height: 100%;
+    border: 3px solid #383838;
+}
+
+.object fieldset {
+    height: 100%;
+    width: 100%;
+    border: 3px solid #383838;
+    background-color: #e8e8e8;
+}
+
+.object fieldset legend {
+   margin: 0 0 0 20px;
+}
+
+.object fieldset .content {
+    height: 100%;
+}
+
+.object fieldset .content:before {
+    content: " ";
 }
 
 .object.preview {
@@ -530,4 +652,8 @@ footer {
     position: absolute;
     top: 20px;
     right: 30px;
+}
+
+#id_models {
+   width: 100%;
 }
